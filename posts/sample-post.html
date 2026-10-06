@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designing Micro-Interactions That Feel Native — NextGEN UX</title>
+  <meta name="description" content="A practical walkthrough of timing, easing, and feedback patterns that make interfaces feel intentional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <p>NextGEN UX · A subsidiary of NextGEN TECH</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">NextGEN<span>UX</span></a>
+      <nav class="nav" id="main-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../index.html#newsletter" class="nav-link">Newsletter</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article class="post-layout">
+      <header class="post-header">
+        <div class="post-meta">
+          <span class="tag">How-To</span>
+          <time datetime="2025-09-12">September 12, 2025</time>
+        </div>
+        <h1>Designing Micro-Interactions That Feel Native</h1>
+        <p class="lead">
+          A practical walkthrough of timing, easing, and feedback patterns that make interfaces feel intentional instead of decorative.
+        </p>
+      </header>
+
+      <div class="post-content">
+        <p>
+          Most interfaces are full of motion. Buttons scale, panels slide, toasts appear and disappear. 
+          The problem is rarely that something moves — it’s that the movement feels arbitrary.
+        </p>
+
+        <p>
+          Native platforms (iOS, Android, macOS) have spent years refining the exact duration, 
+          easing curves, and physical metaphors that make interactions feel inevitable. 
+          When we ignore those patterns, our products feel slightly off, even if users can’t articulate why.
+        </p>
+
+        <h2>Start with duration, not decoration</h2>
+
+        <p>
+          The single highest-leverage decision is how long something takes. 
+          Too short and it feels abrupt. Too long and it feels sluggish.
+        </p>
+
+        <ul>
+          <li><strong>100–150ms</strong> — small state changes (hover, pressed, checkbox)</li>
+          <li><strong>200–300ms</strong> — most UI transitions (modals, drawers, expanding rows)</li>
+          <li><strong>350–500ms</strong> — larger spatial movements or multi-step sequences</li>
+        </ul>
+
+        <p>
+          Anything over 500ms usually needs a reason (or a progress indicator). 
+          Users should never wait for animation just to continue their task.
+        </p>
+
+        <h2>Easing is the difference between “added” and “inherent”</h2>
+
+        <p>
+          Linear motion almost never feels right for interface elements. 
+          Real objects accelerate and decelerate. Use curves that respect that:
+        </p>
+
+        <pre><code>/* Recommended defaults */
+--ease-out: cubic-bezier(0.16, 1, 0.3, 1);   /* enter */
+--ease-in:  cubic-bezier(0.7, 0, 0.84, 0);   /* exit */
+--ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);</code></pre>
+
+        <p>
+          Entering elements generally want a stronger ease-out (they arrive with purpose). 
+          Exiting elements can use a slightly quicker ease-in so they get out of the way.
+        </p>
+
+        <h2>Feedback must match the action’s importance</h2>
+
+        <p>
+          A delete action deserves more confirmation than a “like”. 
+          A successful form submission can be subtle. 
+          An error should be impossible to miss but still calm.
+        </p>
+
+        <blockquote>
+          The goal is not to animate everything. 
+          The goal is to make the important things feel responsive and the rest stay quiet.
+        </blockquote>
+
+        <h2>Practical checklist</h2>
+
+        <ol>
+          <li>Does the motion have a clear start and end state?</li>
+          <li>Is the duration under 400ms for most interactions?</li>
+          <li>Does the easing curve feel physical rather than mechanical?</li>
+          <li>Can the user interrupt or continue without waiting?</li>
+          <li>Would the interface still be usable if all motion was removed?</li>
+        </ol>
+
+        <p>
+          If you can answer yes to most of these, you’re already ahead of the majority of products shipping today.
+        </p>
+
+        <h2>Next steps</h2>
+
+        <p>
+          Open your current product and pick the three most frequent interactions. 
+          Measure their duration. Look at the easing. 
+          Then ask whether they feel like they belong to the same physical world as the rest of the interface.
+        </p>
+
+        <p>
+          Small, consistent improvements compound quickly. 
+          That’s how native-feeling products are actually built.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">NextGEN<span>UX</span></a>
+        <p>A subsidiary of NextGEN TECH.<br />Better experiences, built by design.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Navigate</h4>
+          <a href="../index.html">Home</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../about.html">About</a>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <a href="../blog.html">How-To</a>
+          <a href="../blog.html">DIY Tech</a>
+          <a href="../blog.html">UX</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 NextGEN UX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

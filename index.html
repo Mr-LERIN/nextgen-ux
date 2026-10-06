@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextGEN UX — Better By Design</title>
+  <meta name="description" content="NextGEN UX — DIY technology, how-to guides, and next-generation UX insights. A subsidiary of NextGEN TECH." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="top-bar">
+    <p>NextGEN UX · A subsidiary of NextGEN TECH</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">NextGEN<span>UX</span></a>
+      
+      <nav class="nav" id="main-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="#newsletter" class="nav-link">Newsletter</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">DIY Technology · How-To Guides · UX Insights</p>
+        <h1>Better experiences,<br />built by design.</h1>
+        <p class="hero-lead">
+          Practical guides, deep dives, and next-generation thinking for people who build and use technology every day.
+        </p>
+        <div class="hero-actions">
+          <a href="blog.html" class="btn btn-primary">Explore the Blog</a>
+          <a href="about.html" class="btn btn-ghost">About NextGEN UX</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="section featured">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Guides</h2>
+          <a href="blog.html" class="text-link">View all →</a>
+        </div>
+
+        <div class="post-grid">
+          <!-- Card 1 -->
+          <article class="post-card">
+            <a href="posts/mac-mini-m4.html" class="post-card-link">
+              <div class="post-image placeholder">
+                <span>Mac</span>
+              </div>
+              <div class="post-body">
+                <div class="post-meta">
+                  <span class="tag">Hardware</span>
+                  <time datetime="2026-08-27">Aug 27, 2026</time>
+                </div>
+                <h3>Apple Mac mini M4: The Tiny Mac That Might Be More Powerful Than You Need</h3>
+                <p>Small enough to fit in one hand, yet packed with M4 performance for coding, creative work, and AI.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="post-card">
+            <a href="posts/cursor-origin.html" class="post-card-link">
+              <div class="post-image placeholder alt">
+                <span>Dev</span>
+              </div>
+              <div class="post-body">
+                <div class="post-meta">
+                  <span class="tag">Developer Tools</span>
+                  <time datetime="2026-08-21">Aug 21, 2026</time>
+                </div>
+                <h3>Cursor Enters the Code-Hosting Arena with Origin</h3>
+                <p>Is GitHub’s crown at risk? Cursor launches a code host built for the agentic era.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="post-card">
+            <a href="posts/wwdc-2026-day1.html" class="post-card-link">
+              <div class="post-image placeholder">
+                <span>WWDC</span>
+              </div>
+              <div class="post-body">
+                <div class="post-meta">
+                  <span class="tag">Apple</span>
+                  <time datetime="2026-06-09">Jun 9, 2026</time>
+                </div>
+                <h3>What Happened at Apple WWDC 2026 — Day 1</h3>
+                <p>Siri AI, the Google deal, iOS 27, and the keynote Apple has owed us for two years.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories / Topics -->
+    <section class="section topics">
+      <div class="container">
+        <h2>Explore by Topic</h2>
+        <div class="topic-grid">
+          <a href="blog.html" class="topic-card">
+            <h3>How-To Guides</h3>
+            <p>Step-by-step technical walkthroughs</p>
+          </a>
+          <a href="blog.html" class="topic-card">
+            <h3>DIY Technology</h3>
+            <p>Build it yourself, understand it fully</p>
+          </a>
+          <a href="blog.html" class="topic-card">
+            <h3>UX Insights</h3>
+            <p>Patterns, principles, and critiques</p>
+          </a>
+          <a href="blog.html" class="topic-card">
+            <h3>Apple &amp; AI</h3>
+            <p>Coverage of the platforms that shape tech</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter" id="newsletter">
+      <div class="container newsletter-inner">
+        <div class="newsletter-text">
+          <h2>Stay in the loop</h2>
+          <p>New guides, deep dives, and practical tips — delivered occasionally. No spam.</p>
+        </div>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">NextGEN<span>UX</span></a>
+        <p>A subsidiary of NextGEN TECH.<br />Better experiences, built by design.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About</a>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <a href="blog.html">Hardware</a>
+          <a href="blog.html">DIY Tech</a>
+          <a href="blog.html">UX</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 NextGEN UX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
